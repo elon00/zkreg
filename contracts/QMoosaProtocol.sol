@@ -3,7 +3,7 @@ pragma solidity ^0.8.24;
 
 interface IX402Bazaar {
     event PaymentSettled(bytes32 indexed channelId, address indexed payer, uint256 amount);
-    function verifyPaymentHeader(bytes32 channelId, uint256 nonce, bytes calldata pqcSignature) external returns (bool);
+    function verifyPaymentHeader(bytes32 channelId, uint256 nonce, bytes calldata pqcSignature) external override returns (bool);
 }
 
 interface IConwayAutomaton {
